@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <raylib.h>
 
+#define G 400
+
 typedef struct Player {
     Vector2 position;
     float speed;
@@ -19,6 +21,8 @@ typedef struct EnvItem {
     Rectangle rect;
     Color color;
 }EnvItem;
+
+void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta);
 
 int main(int argc, const char * argv[]) {
     
@@ -49,9 +53,11 @@ int main(int argc, const char * argv[]) {
     while (!WindowShouldClose()) {
         
         //Update here
+        float deltaTime = GetFrameTime();
+        UpdatePlayer(&player, envItems, envItemsLength, deltaTime);
+        
         camera.zoom += ((float)GetMouseWheelMove()*0.05f);
-        if(IsKeyDown(KEY_RIGHT)) player.position.x += 100 * player.speed * GetFrameTime();
-        if(IsKeyDown(KEY_LEFT)) player.position.x -= 100 * player.speed * GetFrameTime();
+        camera.target = (Vector2){player.position.x + 20, player.position.y + 20};
 
         //Draw =here
         BeginDrawing();
@@ -71,3 +77,19 @@ int main(int argc, const char * argv[]) {
     CloseWindow();
     return 0;
 }
+
+void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta){
+    if(IsKeyDown(KEY_RIGHT)) player->position.x += 100 * player->speed * GetFrameTime();
+    if(IsKeyDown(KEY_LEFT)) player->position.x -= 100 * player->speed * GetFrameTime();
+    if (IsKeyDown(KEY_SPACE) && player->canJump){
+        player->speed = -player->speed;
+        player->canJump = false;
+    }
+    
+    //CheckForCollisionsHere and update his posiotn to avoid walking through stuff
+    for(int i = 0; i < envItemsLength;i++){
+        
+    }
+}
+    
+    
