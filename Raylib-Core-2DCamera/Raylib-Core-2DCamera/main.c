@@ -41,13 +41,19 @@ int main(int argc, const char * argv[]) {
     InitWindow(screenWidth, screenHeight, "Raylib [Core] : 2D Camera");
     while (!WindowShouldClose()) {
         
+        if(IsKeyDown(KEY_RIGHT)) player.x += 2 * 100 * GetFrameTime();
+        if(IsKeyDown(KEY_LEFT)) player.x -= 2 * 100 * GetFrameTime();
+
+        camera.target = (Vector2){ player.x + 20, player.y + 20 };
+        
         BeginDrawing();
         ClearBackground(RAYWHITE);
+        BeginMode2D(camera);
+        //Drawing some random building rectangles
+        for (int i = 0; i < MAX_BUILDINGS; i++) DrawRectangleRec(buildings[i], buildingColors[i]);
+        DrawRectangleRec(player, RED);
         
-       //Drawing some random building rectangles
-       for (int i = 0; i < MAX_BUILDINGS; i++) DrawRectangleRec(buildings[i], buildingColors[i]);
-
-        
+        EndMode2D();
         EndDrawing();
     }
     CloseWindow();
