@@ -14,12 +14,17 @@ const int screenWidth = 800, screenHeight = 600;
 int main() {
     
     InitWindow(screenWidth, screenHeight, "raylib [core] - basic window");
-    SetTargetFPS(60);
+    SetTargetFPS(65);
+    printf("The monitors conected are : %d \n",(GetMonitorCount()));
+    printf("The monitors  are : %s and %s \n",GetMonitorName(0),GetMonitorName(1));
+    printf("Clipboard Text is : %s",(GetClipboardText()));
+    SetClipboardText("Hello Raylib");
+    
     while(!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(RAYWHITE);
-
+        DrawFPS(0, 0);
         DrawText("Hello Raylib", screenWidth/2, screenHeight/2, 36, BLUE);
         EndDrawing();
     }
