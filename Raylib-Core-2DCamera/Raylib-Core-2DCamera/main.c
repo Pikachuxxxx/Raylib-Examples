@@ -13,17 +13,42 @@
 
 int main(int argc, const char * argv[]) {
 
-    const int screenWidht = 800, screenHeight = 600;
+    const int screenWidth = 800, screenHeight = 600;
     
     Rectangle player = { 400, 280, 40, 40 };
     Rectangle buildings[MAX_BUILDINGS] = { 0 };
     Color buildingColors[MAX_BUILDINGS] = { 0 };
     
-    InitWindow(screenWidht, screenHeight, "Raylib [Core] : 2D Camera");
+    float spacing = 0;
+    
+    for(int i = 0; i < MAX_BUILDINGS; i++){
+        buildings[i].width = GetRandomValue(50, 200);
+        buildings[i].height = GetRandomValue(100,500);
+        buildings[i].y = screenHeight - buildings[i].height;
+        buildings[i].x = -6000 + spacing;
+         
+        spacing += buildings[i].width;
+        
+        buildingColors[i] = (Color){GetRandomValue(200, 240),GetRandomValue(200, 240),GetRandomValue(200, 240),255};
+    }
+    
+    Camera2D camera = { 0 };
+    camera.target = (Vector2){ player.x + 20, player.y + 20 };// focus at center mass of the player and not the top left tip
+    camera.offset = (Vector2){ screenWidth/2, screenHeight/2 };
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
+    
+    InitWindow(screenWidth, screenHeight, "Raylib [Core] : 2D Camera");
     while (!WindowShouldClose()) {
         
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
         
+       //Drawing some random building rectangles
+       for (int i = 0; i < MAX_BUILDINGS; i++) DrawRectangleRec(buildings[i], buildingColors[i]);
+
         
+        EndDrawing();
     }
     CloseWindow();
     
