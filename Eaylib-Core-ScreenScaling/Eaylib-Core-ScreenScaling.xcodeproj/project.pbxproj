@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8729FC01248BCAB60049AE00 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8729FC00248BCAB60049AE00 /* main.c */; };
+		8729FC09248BCAEE0049AE00 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8729FC08248BCAEE0049AE00 /* OpenGL.framework */; };
+		8729FC0D248BCB090049AE00 /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8729FC0C248BCB090049AE00 /* libraylib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		8729FBFD248BCAB60049AE00 /* Eaylib-Core-ScreenScaling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Eaylib-Core-ScreenScaling"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8729FC00248BCAB60049AE00 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8729FC08248BCAEE0049AE00 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8729FC0A248BCAFA0049AE00 /* raylib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = raylib; path = ../../../../../../usr/local/Cellar/raylib; sourceTree = "<group>"; };
+		8729FC0C248BCB090049AE00 /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../../usr/local/Cellar/raylib/3.0.0/lib/libraylib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8729FC0D248BCB090049AE00 /* libraylib.a in Frameworks */,
+				8729FC09248BCAEE0049AE00 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +50,7 @@
 			children = (
 				8729FBFF248BCAB60049AE00 /* Eaylib-Core-ScreenScaling */,
 				8729FBFE248BCAB60049AE00 /* Products */,
+				8729FC07248BCAEE0049AE00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +68,16 @@
 				8729FC00248BCAB60049AE00 /* main.c */,
 			);
 			path = "Eaylib-Core-ScreenScaling";
+			sourceTree = "<group>";
+		};
+		8729FC07248BCAEE0049AE00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8729FC0C248BCB090049AE00 /* libraylib.a */,
+				8729FC0A248BCAFA0049AE00 /* raylib */,
+				8729FC08248BCAEE0049AE00 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +257,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/raylib/3.0.0/lib,
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/raylib/3.0.0/lib,
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
