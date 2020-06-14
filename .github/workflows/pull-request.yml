@@ -1,8 +1,8 @@
+name : pull-request
 on:
   push:
     branches:
     - Shapes
-    - Core
 jobs:
   pull-request:
     runs-on: ubuntu-latest
