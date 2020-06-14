@@ -13,5 +13,11 @@ int main() {
     const int screenWidth = 800, screenHeight = 700;
     InitWindow(screenWidth, screenHeight, "Raylib [Shapes] : Rectangle Scaling");
     SetTargetFPS(65);
+    
+    while (!WindowShouldClose()) {
+        
+    }
+    
+    CloseWindow();
     return 0;
 }
