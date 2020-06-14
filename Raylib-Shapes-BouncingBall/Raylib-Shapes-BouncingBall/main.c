@@ -40,6 +40,7 @@ int main() {
         BeginDrawing();
         ClearBackground(RAYWHITE);
         DrawCircleV(ball.ballsPosition , ball.radius, ball.ballColour);
+        if(pause) DrawText("Game Paused", screenWidth / 2 - 36, screenHeight / 2 - 36, 36, LIGHTGRAY);
         DrawFPS(10, 10);
         EndDrawing();
     }
