@@ -90,6 +90,7 @@ int main() {
         // To draw static logo
 //        DrawRectangleLinesEx(raylibBox, 20, BLACK);
 //        DrawText("raylib", screenWidth/2 - 24, screenHeight/2 + 48, 40, BLACK);
+        DrawText("Press 'R' to replay", 250, 50, 12, BLACK);
         
         if(state == 0){
             if ((framesCounter/15)%2) DrawRectangle(logoPositionX, logoPositionY, 16, 16, BLACK);
