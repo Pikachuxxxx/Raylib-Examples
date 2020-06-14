@@ -27,12 +27,12 @@ int main() {
 
         mousePosition = GetMousePosition();
 
-        if (CheckCollisionPointRec(mousePosition, rec))// && CheckCollisionPointRec(mousePosition, (Rectangle){ rec.x + rec.width - MOUSE_SCALE_MARK_SIZE, rec.y + rec.height - MOUSE_SCALE_MARK_SIZE, MOUSE_SCALE_MARK_SIZE, MOUSE_SCALE_MARK_SIZE }))
-               {
-                   mouseScaleReady = true;
-                   if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) mouseScaleMode = true;
-               }
-               else mouseScaleReady = false;
+        if (CheckCollisionPointRec(mousePosition, rec))
+           {
+               mouseScaleReady = true;
+               if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) mouseScaleMode = true;
+           }
+           else mouseScaleReady = false;
         
         if (mouseScaleMode)
         {
@@ -41,21 +41,16 @@ int main() {
             rec.width = (mousePosition.x - rec.x);
             rec.height = (mousePosition.y - rec.y);
 
-//            if (rec.width < MOUSE_SCALE_MARK_SIZE) rec.width = MOUSE_SCALE_MARK_SIZE;
-//            if (rec.height < MOUSE_SCALE_MARK_SIZE) rec.height = MOUSE_SCALE_MARK_SIZE;
+            if (rec.width < MOUSE_SCALE_MARK_SIZE) rec.width = MOUSE_SCALE_MARK_SIZE;
+            if (rec.height < MOUSE_SCALE_MARK_SIZE) rec.height = MOUSE_SCALE_MARK_SIZE;
 
             if (IsMouseButtonReleased(MOUSE_LEFT_BUTTON)) mouseScaleMode = false;
         }
         
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        
-//        Rectangle testRect = (Rectangle){ rec.x + rec.width - MOUSE_SCALE_MARK_SIZE, rec.y + rec.height - MOUSE_SCALE_MARK_SIZE, MOUSE_SCALE_MARK_SIZE, MOUSE_SCALE_MARK_SIZE };
-//        DrawRectangleRec(testRect, RED);
 
-        
         DrawRectangleRec(rec, Fade(GREEN, 0.5f));
-               
         
         if (mouseScaleReady)
         {
