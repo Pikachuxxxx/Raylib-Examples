@@ -10,7 +10,8 @@
 #include <raylib.h>
 
 int main() {
-    
-    printf("Hello, World!\n");
+    const int screenWidth = 800, screenHeight = 700;
+    InitWindow(screenWidth, screenHeight, "Raylib [Shapes] : Rectangle Scaling");
+    SetTargetFPS(65);
     return 0;
 }
