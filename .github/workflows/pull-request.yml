@@ -1,7 +1,8 @@
 name : pull-request
 on:
   push:
-    branches: [Textures, Shapes]
+    branches: 
+      - Textures
 jobs:
   pull-request:
     runs-on: ubuntu-latest
