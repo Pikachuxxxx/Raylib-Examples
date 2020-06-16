@@ -77,6 +77,7 @@ int main() {
             default: break;
         }
         
+        DrawFPS(10, 10);
         EndDrawing();
     }
     
