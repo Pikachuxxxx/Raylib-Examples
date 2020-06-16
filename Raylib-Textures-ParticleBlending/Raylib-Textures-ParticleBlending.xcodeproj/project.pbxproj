@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8745699F249938D100401DDC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8745699E249938D100401DDC /* OpenGL.framework */; };
+		874569A1249938EB00401DDC /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 874569A0249938EB00401DDC /* libraylib.a */; };
 		879055282498FAC600EE5AE9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 879055272498FAC600EE5AE9 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8745699E249938D100401DDC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		874569A0249938EB00401DDC /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../../usr/local/Cellar/raylib/3.0.0/lib/libraylib.a; sourceTree = "<group>"; };
 		879055242498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Raylib-Textures-ParticleBlending"; sourceTree = BUILT_PRODUCTS_DIR; };
 		879055272498FAC600EE5AE9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874569A1249938EB00401DDC /* libraylib.a in Frameworks */,
+				8745699F249938D100401DDC /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8745699D249938D100401DDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				874569A0249938EB00401DDC /* libraylib.a */,
+				8745699E249938D100401DDC /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8790551B2498FAC600EE5AE9 = {
 			isa = PBXGroup;
 			children = (
 				879055262498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */,
 				879055252498FAC600EE5AE9 /* Products */,
+				8745699D249938D100401DDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +255,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/raylib/3.0.0/lib,
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +269,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/raylib/3.0.0/lib,
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
