@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - Shapes
+    - Textures
 jobs:
   pull-request:
     runs-on: ubuntu-latest
