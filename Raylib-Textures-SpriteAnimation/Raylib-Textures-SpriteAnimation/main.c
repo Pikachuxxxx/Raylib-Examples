@@ -9,10 +9,6 @@
 #include <stdio.h>
 #include <raylib.h>
 
-
-#define MAX_FRAME_SPEED 15
-#define MIN_FRAME_SPEED 1
-
 int main(){
     const int screenWidth = 800;
     const int screenHeight = 600;
