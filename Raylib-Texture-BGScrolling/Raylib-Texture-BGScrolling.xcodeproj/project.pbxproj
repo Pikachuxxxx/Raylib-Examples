@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8745699F249938D100401DDC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8745699E249938D100401DDC /* OpenGL.framework */; };
-		874569A1249938EB00401DDC /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 874569A0249938EB00401DDC /* libraylib.a */; };
-		879055282498FAC600EE5AE9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 879055272498FAC600EE5AE9 /* main.c */; };
+		87C40A2024993E1800A2F35A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 87C40A1F24993E1800A2F35A /* main.c */; };
+		87C40A2824993E4800A2F35A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C40A2724993E4800A2F35A /* OpenGL.framework */; };
+		87C40A2A24993E5200A2F35A /* libraylib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C40A2924993E5100A2F35A /* libraylib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		879055222498FAC600EE5AE9 /* CopyFiles */ = {
+		87C40A1A24993E1800A2F35A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,94 +25,94 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8745699E249938D100401DDC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		874569A0249938EB00401DDC /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../../usr/local/Cellar/raylib/3.0.0/lib/libraylib.a; sourceTree = "<group>"; };
-		879055242498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Raylib-Textures-ParticleBlending"; sourceTree = BUILT_PRODUCTS_DIR; };
-		879055272498FAC600EE5AE9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		87C40A1C24993E1800A2F35A /* Raylib-Texture-BGScrolling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Raylib-Texture-BGScrolling"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C40A1F24993E1800A2F35A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		87C40A2724993E4800A2F35A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		87C40A2924993E5100A2F35A /* libraylib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libraylib.a; path = ../../../../../../usr/local/Cellar/raylib/3.0.0/lib/libraylib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		879055212498FAC600EE5AE9 /* Frameworks */ = {
+		87C40A1924993E1800A2F35A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874569A1249938EB00401DDC /* libraylib.a in Frameworks */,
-				8745699F249938D100401DDC /* OpenGL.framework in Frameworks */,
+				87C40A2A24993E5200A2F35A /* libraylib.a in Frameworks */,
+				87C40A2824993E4800A2F35A /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8745699D249938D100401DDC /* Frameworks */ = {
+		87C40A1324993E1800A2F35A = {
 			isa = PBXGroup;
 			children = (
-				874569A0249938EB00401DDC /* libraylib.a */,
-				8745699E249938D100401DDC /* OpenGL.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8790551B2498FAC600EE5AE9 = {
-			isa = PBXGroup;
-			children = (
-				879055262498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */,
-				879055252498FAC600EE5AE9 /* Products */,
-				8745699D249938D100401DDC /* Frameworks */,
+				87C40A1E24993E1800A2F35A /* Raylib-Texture-BGScrolling */,
+				87C40A1D24993E1800A2F35A /* Products */,
+				87C40A2624993E4800A2F35A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		879055252498FAC600EE5AE9 /* Products */ = {
+		87C40A1D24993E1800A2F35A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				879055242498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */,
+				87C40A1C24993E1800A2F35A /* Raylib-Texture-BGScrolling */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		879055262498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */ = {
+		87C40A1E24993E1800A2F35A /* Raylib-Texture-BGScrolling */ = {
 			isa = PBXGroup;
 			children = (
-				879055272498FAC600EE5AE9 /* main.c */,
+				87C40A1F24993E1800A2F35A /* main.c */,
 			);
-			path = "Raylib-Textures-ParticleBlending";
+			path = "Raylib-Texture-BGScrolling";
+			sourceTree = "<group>";
+		};
+		87C40A2624993E4800A2F35A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87C40A2924993E5100A2F35A /* libraylib.a */,
+				87C40A2724993E4800A2F35A /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		879055232498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */ = {
+		87C40A1B24993E1800A2F35A /* Raylib-Texture-BGScrolling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8790552B2498FAC600EE5AE9 /* Build configuration list for PBXNativeTarget "Raylib-Textures-ParticleBlending" */;
+			buildConfigurationList = 87C40A2324993E1800A2F35A /* Build configuration list for PBXNativeTarget "Raylib-Texture-BGScrolling" */;
 			buildPhases = (
-				879055202498FAC600EE5AE9 /* Sources */,
-				879055212498FAC600EE5AE9 /* Frameworks */,
-				879055222498FAC600EE5AE9 /* CopyFiles */,
+				87C40A1824993E1800A2F35A /* Sources */,
+				87C40A1924993E1800A2F35A /* Frameworks */,
+				87C40A1A24993E1800A2F35A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Raylib-Textures-ParticleBlending";
-			productName = "Raylib-Textures-ParticleBlending";
-			productReference = 879055242498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */;
+			name = "Raylib-Texture-BGScrolling";
+			productName = "Raylib-Texture-BGScrolling";
+			productReference = 87C40A1C24993E1800A2F35A /* Raylib-Texture-BGScrolling */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8790551C2498FAC600EE5AE9 /* Project object */ = {
+		87C40A1424993E1800A2F35A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "phani srikar";
 				TargetAttributes = {
-					879055232498FAC600EE5AE9 = {
+					87C40A1B24993E1800A2F35A = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = 8790551F2498FAC600EE5AE9 /* Build configuration list for PBXProject "Raylib-Textures-ParticleBlending" */;
+			buildConfigurationList = 87C40A1724993E1800A2F35A /* Build configuration list for PBXProject "Raylib-Texture-BGScrolling" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,29 +120,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 8790551B2498FAC600EE5AE9;
-			productRefGroup = 879055252498FAC600EE5AE9 /* Products */;
+			mainGroup = 87C40A1324993E1800A2F35A;
+			productRefGroup = 87C40A1D24993E1800A2F35A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				879055232498FAC600EE5AE9 /* Raylib-Textures-ParticleBlending */,
+				87C40A1B24993E1800A2F35A /* Raylib-Texture-BGScrolling */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		879055202498FAC600EE5AE9 /* Sources */ = {
+		87C40A1824993E1800A2F35A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879055282498FAC600EE5AE9 /* main.c in Sources */,
+				87C40A2024993E1800A2F35A /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		879055292498FAC600EE5AE9 /* Debug */ = {
+		87C40A2124993E1800A2F35A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		8790552A2498FAC600EE5AE9 /* Release */ = {
+		87C40A2224993E1800A2F35A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,7 +251,7 @@
 			};
 			name = Release;
 		};
-		8790552C2498FAC600EE5AE9 /* Debug */ = {
+		87C40A2424993E1800A2F35A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -265,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		8790552D2498FAC600EE5AE9 /* Release */ = {
+		87C40A2524993E1800A2F35A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -282,25 +282,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8790551F2498FAC600EE5AE9 /* Build configuration list for PBXProject "Raylib-Textures-ParticleBlending" */ = {
+		87C40A1724993E1800A2F35A /* Build configuration list for PBXProject "Raylib-Texture-BGScrolling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				879055292498FAC600EE5AE9 /* Debug */,
-				8790552A2498FAC600EE5AE9 /* Release */,
+				87C40A2124993E1800A2F35A /* Debug */,
+				87C40A2224993E1800A2F35A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8790552B2498FAC600EE5AE9 /* Build configuration list for PBXNativeTarget "Raylib-Textures-ParticleBlending" */ = {
+		87C40A2324993E1800A2F35A /* Build configuration list for PBXNativeTarget "Raylib-Texture-BGScrolling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8790552C2498FAC600EE5AE9 /* Debug */,
-				8790552D2498FAC600EE5AE9 /* Release */,
+				87C40A2424993E1800A2F35A /* Debug */,
+				87C40A2524993E1800A2F35A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8790551C2498FAC600EE5AE9 /* Project object */;
+	rootObject = 87C40A1424993E1800A2F35A /* Project object */;
 }
